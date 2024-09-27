@@ -1,15 +1,17 @@
-package com.example.demo.producer;
-import com.example.demo.model.Message;
+package topic.producer;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MessageProducer {
+
     private final JmsTemplate jmsTemplate;
+
     public MessageProducer(JmsTemplate jmsTemplate) {
         this.jmsTemplate = jmsTemplate;
     }
-    public void sendMessage(Message message) {
-        jmsTemplate.convertAndSend("Queue.example", message);
+
+    public void sendMessageToTopic(String message) {
+        jmsTemplate.convertAndSend("Topic.example", message);
     }
 }
