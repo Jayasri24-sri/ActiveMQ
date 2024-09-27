@@ -8,6 +8,6 @@ public class MessageProducer {
     private final JmsTemplate jmsTemplate;
     public MessageProducer(JmsTemplate jmsTemplate) {this.jmsTemplate = jmsTemplate;}
     public void sendMessage(Message message) {
-        jmsTemplate.convertAndSend("activemq:queue:EXAMPLE", message);
+        jmsTemplate.convertAndSend("Queue.example", message);
     }
 }

@@ -1,5 +1,4 @@
 package com.example.demo.controller;
-
 import com.example.demo.model.Message;
 import com.example.demo.producer.MessageProducer;
 import org.springframework.http.HttpStatus;
